@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from './header'
+import imgDesktop from './assets/images/bg-sidebar-desktop.svg'
+import imgMobile from './assets/images/bg-sidebar-mobile.svg'
 import Page1 from './page-1'
 import Page2 from './page-2'
 import Page3 from './page-3'
@@ -45,8 +47,8 @@ function App() {
     <div className='main'>
       <section id='header-sec'>
         <picture>
-          <source srcSet='./src/assets/images/bg-sidebar-desktop.svg' media='(min-width:900px)' />
-          <img src='./src/assets/images/bg-sidebar-mobile.svg' alt='background image' id='background-image' />
+          <source srcSet={imgDesktop} media='(min-width:900px)' />
+          <img src={imgMobile} alt='background image' id='background-image' />
         </picture>
         <Header pageNo={page} handeler={showPage} />
       </section>
