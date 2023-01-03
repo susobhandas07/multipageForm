@@ -1,7 +1,7 @@
 export default function main(props) {
     return (
         <div className='form-body'>
-            <fieldset className='noMargin'>
+            <form id='form' className='noMargin' onSubmit={() => props.postMethod(prevState => prevState + 1)}>
                 <h2>Pic add-ons</h2>
                 <p className="description">Add-ons help improove your gaming experience.</p>
 
@@ -29,7 +29,7 @@ export default function main(props) {
                     </label>
                     <span className='offer'>{props.data.durationIsMonthly ? "+$2/mo" : "+$20/yr"}</span>
                 </section>
-            </fieldset>
+            </form>
         </div>
     );
 }

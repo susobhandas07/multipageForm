@@ -24,7 +24,7 @@ export default function main(props) {
     let total = (price + addon) * (props.data.durationIsMonthly ? 1 : 10);
     return (
         <div className='form-body'>
-            <fieldset>
+            <div>
                 <h2>Finishing up</h2>
                 <p className="description">Double check everthing looks ok before confirming.</p>
                 <table >
@@ -51,7 +51,7 @@ export default function main(props) {
                 <section id='result-p'>
                     <p id='result' className='description'><strong>Total </strong> ({props.data.durationIsMonthly ? "per month" : "per year"})<span id='total'>${total}{props.data.durationIsMonthly ? "/mo" : "/yr"}</span></p>
                 </section>
-            </fieldset>
+            </div>
         </div>
     );
 }

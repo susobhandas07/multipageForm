@@ -5,7 +5,7 @@ import iconPro from './assets/images/icon-pro.svg'
 export default function main(props) {
     return (
         <div className='form-body' id='page2-body'>
-            <fieldset>
+            <form id='form' onSubmit={() => props.postMethod(prevState => prevState + 1)}>
                 <h2>Select Your Plan</h2>
                 <p className='description'>You have the option of monthly and yearly billing.</p>
                 <section className='options' style={{ borderColor: props.selectedPlan === 'Arcade' ? 'var(--h2Color)' : 'var(--Pastel-blue)', backgroundColor: props.selectedPlan === 'Arcade' ? 'var(--Light-blue)' : 'transparent' }}>
@@ -41,8 +41,7 @@ export default function main(props) {
                         </section>
                     </label>
                 </section>
-            </fieldset>
-            {/* todo: a slider button */}
+            </form>
             <div className='toggle-switch' style={{ marginTop: props.duration ? 1.45 + "rem" : 0 }}>
                 <h4 style={{ color: props.duration ? "var(--h2Color)" : "var(--Cool-gray)" }}>Monthly</h4>
                 <label htmlFor='yr' id='switch-capsule'>

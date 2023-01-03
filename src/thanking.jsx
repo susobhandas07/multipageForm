@@ -1,6 +1,5 @@
 import thankImage from './assets/images/icon-thank-you.svg'
 export default function main(props) {
-    console.log(props.data);
     return (
         <div className='form-body thank-page'>
             <section className='container'>

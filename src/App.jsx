@@ -53,9 +53,9 @@ function App() {
         <Header pageNo={page} handeler={showPage} />
       </section>
       {!orderDetails.submitted && <section>
-        {page === 1 && <Page1 data={orderDetails} handeler={updateOrderDetails} />}
-        {page === 2 && <Page2 duration={orderDetails.durationIsMonthly} handeler={updateOrderDetails} selectedPlan={orderDetails.plan} />}
-        {page === 3 && <Page3 handeler={updateOrderDetails} data={orderDetails} />}
+        {page === 1 && <Page1 data={orderDetails} handeler={updateOrderDetails} postMethod={setPage} />}
+        {page === 2 && <Page2 duration={orderDetails.durationIsMonthly} handeler={updateOrderDetails} postMethod={setPage} selectedPlan={orderDetails.plan} />}
+        {page === 3 && <Page3 handeler={updateOrderDetails} data={orderDetails} postMethod={setPage} />}
         {page === 4 && <Page4 data={orderDetails} />}
         <Footer pageNo={page} handeler={setPage} postMethod={placeOrder} />
       </section>}
